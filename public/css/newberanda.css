@@ -1,0 +1,44 @@
+/* public/css/newberanda.css */
+body {
+
+    background-color: #ffffff;
+}
+
+
+/* Top Navigation/Details */
+.container-navbar {
+    display: flex;
+    align-items: center;
+    padding: 8px 30px;
+    background-color: #488B8F !important;
+    width: 100%;
+}
+
+.navbar-kesatu{
+    display: flex;
+    align-items: center;
+    padding: 8px 30px;
+    background-color: #488B8F !important;
+    width: 100%;
+}
+
+.logo-batu {
+    width: 30px;
+    margin-right: 70px;
+}
+
+.ikon-topnav {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+}
+
+.navbar-kesatu p {
+    color: white;
+    margin: 0;
+    margin-right: 26px;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+/* Logo & Title */
