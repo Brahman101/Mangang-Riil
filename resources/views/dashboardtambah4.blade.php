@@ -34,10 +34,10 @@
         <main class="main-content">
             <h2>Pengisian Metadata</h2>
             <div class="tabs">
-                <button class="tab-button active">Peraturan</button>
+                <button class="tab-button">Peraturan</button>
                 <button class="tab-button">Monografi</button>
                 <button class="tab-button">Artikel</button>
-                <button class="tab-button">Putusan</button>
+                <button class="tab-button active">Putusan</button>
             </div>
             <form class="form">
                 <label for="tipe-dokumen">Tipe Dokumen</label>
