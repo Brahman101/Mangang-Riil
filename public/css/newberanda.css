@@ -42,3 +42,41 @@ body {
 }
 
 /* Logo & Title */
+.web-intro{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title{
+    gap: 0.5rem;
+}
+.logo{
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+.logo-container-dua{
+    width: 5vw;
+}
+
+.title{
+    padding: 0;
+}
+
+.title h1{
+    font-size:x-large;
+}
+
+.red-header{
+    color: red;
+}
+
+.header{
+    gap: 5px;
+}
+
+.title h2{
+    font-size: large;
+    font-weight: lighter;
+    padding: 0;
+    margin-top: 2px;
+}

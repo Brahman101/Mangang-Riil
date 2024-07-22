@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- Top Details-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-kesatu">
         <div class="container-navbar">
             <img src="{{ asset('images/LogoKotaBatu.png') }}" alt="Logo Kota Batu" class="logo-batu">
@@ -30,13 +30,21 @@
 
     <!-- Logo & Title -->
     <header class="web-intro">
-        <div class="container text-center logo-title">
+        <div class="container logo-title">
             <div class="row justify-content-center logo">
-                <img src="{{}}" alt="">
+                <img src="{{'images/LogoJDIH.png'}}" alt="Logo JDIH" class="logo-container-dua">
+                <img src="{{'images/LogoKotaBatu.png'}}" alt="Logo Kota Batu" class="logo-container-dua">
+            </div>
+            <div class="column text-center title ">
+                <div class="row justify-content-center header">
+                    <h1 class="red-header">JDIH</h1>
+                    <h1>Kota Wisata Batu</h1>
+                </div>
+                <h2>Jaringan Dokumentasi dan Informasi Hukum Kota Wisata Batu</h2>
             </div>
         </div>
-
     </header>
+
 </body>
 
 </html>
