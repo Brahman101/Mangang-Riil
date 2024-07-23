@@ -19,9 +19,9 @@
     <div class="container">
         <aside class="sidebar">
             <ul>
-                <li><a href="#">Pengajuan Produk Hukum</a></li>
-                <li><a href="#">Katalog Produk Hukum</a></li>
-                <li><a href="#">Tambah Produk Hukum</a></li>
+                <li><a href="{{ route('pengajuanprodukhukum') }}">Pengajuan Produk Hukum</a></li>
+                <li><a href="{{ route('katalogprodukhukum') }}">Katalog Produk Hukum</a></li>
+                <li><a href="{{ route('tambahperaturan') }}">Tambah Produk Hukum</a></li>
                 <li><a href="#">Profile</a></li>
             </ul>
             <div class="user-info">
@@ -34,10 +34,10 @@
         <main class="main-content">
             <h2>Pengisian Metadata</h2>
             <div class="tabs">
-                <button class="tab-button">Peraturan</button>
-                <button class="tab-button">Monografi</button>
-                <button class="tab-button active">Artikel</button>
-                <button class="tab-button">Putusan</button>
+                <a href="{{ route('tambahperaturan') }}" class="tab-button">Peraturan</a>
+                <a href="{{ route('tambahmonografi') }}" class="tab-button">Monografi</a>
+                <a href="{{ route('tambahartikel') }}" class="tab-button">Artikel</a>
+                <a href="{{ route('tambahputusan') }}" class="tab-button active">Putusan</a>
             </div>
             <form class="form">
                 <label for="tipe-dokumen">Tipe Dokumen</label>
@@ -64,14 +64,14 @@
                 <label for="tempat-penetapan">Tempat Penetapan</label>
                 <input type="text" id="tempat-penetapan" name="tempat-penetapan">
 
+                <label for="penerbit">Penerbit</label>
+                <input type="text" id="penerbit" name="penerbit">
+
                 <label for="tanggal-penetapan">Tanggal Penetapan</label>
                 <input type="text" id="tanggal-penetapan" name="tanggal-penetapan">
 
                 <label for="subjek">Subjek</label>
                 <input type="text" id="subjek" name="subjek">
-
-                <label for="tahun-terbit">Tahun Terbit</label>
-                <input type="text" id="tahun-terbit" name="tahun-terbit">
 
                 <label for="sumber">Sumber</label>
                 <input type="text" id="sumber" name="sumber">
