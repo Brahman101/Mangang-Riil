@@ -1,15 +1,13 @@
 /* public/css/newberanda.css */
 body {
-
     background-color: #ffffff;
 }
-
 
 /* Top Navigation/Details */
 .container-navbar {
     display: flex;
     align-items: center;
-    padding: 8px 30px;
+    padding: 2px 30px;
     background-color: #488B8F !important;
     width: 100%;
 }
@@ -42,41 +40,186 @@ body {
 }
 
 /* Logo & Title */
-.web-intro{
+.web-intro {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Tambahkan ini untuk memastikan elemen berada di tengah */
+    width: 100%;
 }
 
-.logo-title{
+.container.logo-title {
     gap: 0.5rem;
+    width: 100%;
+    max-width: 1200px; /* Sesuaikan lebar maksimum sesuai keinginan Anda */
+    margin: 0 auto;
 }
-.logo{
+
+.logo {
     padding: 1.5rem;
     gap: 1.5rem;
-}
-.logo-container-dua{
-    width: 5vw;
+    display: flex; /* Tambahkan ini untuk mengatur flexbox */
+    justify-content: center; /* Tambahkan ini untuk memastikan elemen logo berada di tengah */
 }
 
-.title{
+.logo-container-dua {
+    width: 10vh; 
+    height: 12vh;
+}
+
+.title {
     padding: 0;
+    width: 100%;
+    text-align: center; /* Tambahkan ini untuk memastikan teks berada di tengah */
 }
 
-.title h1{
-    font-size:x-large;
+.title h1 {
+    margin: 0;
+    font-size: x-large;
+    display: inline-block; /* Tambahkan ini untuk menempatkan h1 bersebelahan */
 }
 
-.red-header{
-    color: red;
-}
-
-.header{
+.header-container {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
 }
 
-.title h2{
+.red-header {
+    color: red;
+}
+
+
+.title h2 {
     font-size: large;
     font-weight: lighter;
     padding: 0;
-    margin-top: 2px;
+    margin: 0;
+    margin-bottom: 1rem;
 }
+
+/* Navbar */
+.navbar-kedua {
+    border-top: 2px solid #488B8F; /* Adjust the border color as needed */
+    border-bottom: 2px solid #488B8F; /* Adjust the border color as needed */
+    border-radius: 0; /* Remove border radius if necessary */
+}
+
+.nav-link {
+    color:#488B8F !important; /* Change text color */
+}
+
+.nav-link:hover {
+    color: #ffffff !important; /* Change text color on hover */
+    background-color: #488B8F; /* Optional: Change background color on hover */
+    
+}
+
+
+/* Searching */
+.search-column {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+    background-image: url('../images/hero_amongtani.jpeg') ; /* Path to your background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.bagian-satu, .bagian-dua, .bagian-tiga {
+    width: 80rem;
+    margin-bottom: 20px;
+}
+
+
+.bagian-satu input{
+    text-align: center;
+}
+
+.bagian-tiga{
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-control {
+    padding: 10px;
+    height: 3rem;
+    width: 100%;
+    margin: auto;
+}
+
+.custom-btn {
+    background-color: white;
+    padding: 10px;
+    border: 0.5px solid;
+    border-radius: 6px;
+    border-color: #e6e6e6;
+    width: 100%;
+    height: 3rem;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.custom-btn::after {
+    content: '\25BC';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.dropdown-menu {
+    min-width: 100%;
+}
+
+.dropdown-item {
+    white-space: nowrap;
+}
+
+.custom-btn:hover {
+    background: #488b8f;
+    text-decoration: none;
+    color: white;
+}
+
+.search-column h3, h5, p {
+    text-align: center;
+    color: white !important;
+}
+
+.search-column h3{
+    margin-bottom: 20px;
+}
+
+.search-column p{
+    font-weight: bold;
+}
+
+
+
+button[type="submit"] {
+    background: #f85f68;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 60rem; /* Adjust this value as needed */
+    display: block;
+    margin: 0 auto; /* Center the button */
+    font-size: large;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background: #e04b53;
+}
+
+

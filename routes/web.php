@@ -36,3 +36,6 @@
     Route::get('/pengajuanprodukhukum', function () {
         return view('pengajuanprodukhukum');
     })->name('katalogprodukhukum');
+    Route::get('/', function () {
+        return view('newhome');
+    });
