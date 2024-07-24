@@ -1,3 +1,4 @@
+<!-- resources/views/dashboardtambah.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,22 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengisian Metadata</title>
     <link rel="stylesheet" href="{{ asset('css/dashboardtambah.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <div class="navbar-logo">
+            <a class="navbar-logo" href="#">
                 SIMPROKUM
-            </div>
+            </a>
         </div>
     </nav>
     <div class="container">
         <aside class="sidebar">
             <ul>
-                <li><a href="#">Pengajuan Produk Hukum</a></li>
-                <li><a href="#">Katalog Produk Hukum</a></li>
-                <li><a href="#">Tambah Produk Hukum</a></li>
+                <li><a href="{{ route('pengajuanprodukhukum') }}">Pengajuan Produk Hukum</a></li>
+                <li><a href="{{ route('katalogprodukhukum') }}">Katalog Produk Hukum</a></li>
+                <li><a href="{{ route('tambahperaturan') }}">Tambah Produk Hukum</a></li>
                 <li><a href="#">Profile</a></li>
             </ul>
             <div class="user-info">
@@ -34,10 +36,10 @@
         <main class="main-content">
             <h2>Pengisian Metadata</h2>
             <div class="tabs">
-                <button class="tab-button">Peraturan</button>
-                <button class="tab-button">Monografi</button>
-                <button class="tab-button active">Artikel</button>
-                <button class="tab-button">Putusan</button>
+                <a href="{{ route('tambahperaturan') }}" class="tab-button active">Peraturan</a>
+                <a href="{{ route('tambahmonografi') }}" class="tab-button">Monografi</a>
+                <a href="{{ route('tambahartikel') }}" class="tab-button">Artikel</a>
+                <a href="{{ route('tambahputusan') }}" class="tab-button">Putusan</a>
             </div>
             <form class="form">
                 <label for="tipe-dokumen">Tipe Dokumen</label>
@@ -69,9 +71,6 @@
 
                 <label for="subjek">Subjek</label>
                 <input type="text" id="subjek" name="subjek">
-
-                <label for="tahun-terbit">Tahun Terbit</label>
-                <input type="text" id="tahun-terbit" name="tahun-terbit">
 
                 <label for="sumber">Sumber</label>
                 <input type="text" id="sumber" name="sumber">
