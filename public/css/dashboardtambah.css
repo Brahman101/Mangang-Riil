@@ -4,7 +4,7 @@ body {
     font-family: 'Montserrat';
     display: flex;
     height: 100vh;
-    background-color: #F5F5F5;
+    background-color: #fff;
 }
 
 /* Navbar Styles */
@@ -25,6 +25,8 @@ body {
 .navbar-logo {
     font-size: 14px;
     font-weight: medium;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 /* Container Styles */

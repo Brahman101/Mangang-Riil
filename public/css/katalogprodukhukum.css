@@ -24,6 +24,8 @@ body {
 .navbar-logo {
     font-size: 14px;
     font-weight: medium;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 /* Container Styles */

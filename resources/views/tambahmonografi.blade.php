@@ -11,9 +11,9 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <div class="navbar-logo">
+            <a class="navbar-logo" href="#">
                 SIMPROKUM
-            </div>
+            </a>
         </div>
     </nav>
     <div class="container">
