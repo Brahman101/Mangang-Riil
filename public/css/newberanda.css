@@ -1,23 +1,48 @@
 /* public/css/newberanda.css */
 body {
     background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 /* Top Navigation/Details */
 .container-navbar {
     display: flex;
     align-items: center;
     padding: 2px 30px;
-    background-color: #488B8F !important;
-    width: 100%;
+    background-color: #488B8F;
+    overflow-x: hidden;
 }
 
 .navbar-kesatu{
     display: flex;
     align-items: center;
     padding: 8px 30px;
-    background-color: #488B8F !important;
+    background-color: #488B8F;
     width: 100%;
+    color: white;
 }
 
 .logo-batu {
@@ -45,6 +70,8 @@ body {
     flex-direction: column;
     align-items: center; /* Tambahkan ini untuk memastikan elemen berada di tengah */
     width: 100%;
+    overflow-x: hidden;
+
 }
 
 .container.logo-title {
@@ -100,25 +127,57 @@ body {
 }
 
 /* Navbar */
+.nav-item.dropdown.dropdown-navbar-kedua {
+    position: relative;
+}
+
+.nav-link.dropdown-toggle {
+    color: #488B8F ;
+}
+
+.nav-link.dropdown-toggle:hover {
+    color: #ffffff ;
+    background-color: #488B8F;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    min-width: 12rem; /* Adjust the minimum width as needed */
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.dropdown-item.item-navbar-kedua {
+    padding: 10px 20px;
+    color: #488B8F;
+}
+
+.dropdown-item.item-navbar-kedua:hover {
+    background-color: #488B8F;
+    color: #ffffff;
+}
+
+/* Custom styles for navbar */
 .navbar-kedua {
-    border-top: 2px solid #488B8F; /* Adjust the border color as needed */
-    border-bottom: 2px solid #488B8F; /* Adjust the border color as needed */
-    border-radius: 0; /* Remove border radius if necessary */
+    border-top: 2px solid #488B8F;
+    border-bottom: 2px solid #488B8F;
+    border-radius: 0;
 }
 
-.nav-link {
-    color:#488B8F !important; /* Change text color */
+.navbar-kedua .nav-link {
+    color: #488B8F;
 }
 
-.nav-link:hover {
-    color: #ffffff !important; /* Change text color on hover */
-    background-color: #488B8F; /* Optional: Change background color on hover */
-    
+.navbar-kedua .nav-link:hover {
+    color: #ffffff ;
+    background-color: #488B8F;
 }
-
 
 /* Searching */
 .search-column {
+    overflow: hidden;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     width: 100%;
@@ -128,6 +187,9 @@ body {
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
+    box-shadow: 0px 10px 15px -4px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 0px 10px 15px -4px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 10px 15px -4px rgba(0,0,0,0.26);
 }
 
 .bagian-satu, .bagian-dua, .bagian-tiga {
@@ -184,6 +246,13 @@ body {
     white-space: nowrap;
 }
 
+.dropdown-item.item-tipe-dokumen:hover,
+.dropdown-item.item-jenis-dokumen:hover,
+.dropdown-item.item-status:hover {
+    background-color: #488B8F;
+    color: #ffffff;
+}
+
 .custom-btn:hover {
     background: #488b8f;
     text-decoration: none;
@@ -192,7 +261,6 @@ body {
 
 .search-column h3, h5, p {
     text-align: center;
-    color: white !important;
 }
 
 .search-column h3{
@@ -203,9 +271,11 @@ body {
     font-weight: bold;
 }
 
+.exc-search-column{
+    color: white;
+}
 
-
-button[type="submit"] {
+.search-column button[type="submit"] {
     background: #f85f68;
     color: white;
     border: none;
@@ -218,8 +288,170 @@ button[type="submit"] {
     font-weight: bold;
 }
 
-button[type="submit"]:hover {
+.search-column button[type="submit"]:hover {
     background: #e04b53;
 }
 
+/* Document Counts */
+.doc-counts{
+    overflow-x: hidden;
+}
+.doc-counts a{
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    color: inherit; /* Mengatur warna teks mengikuti warna elemen induk */
+}
+.doc-counts .custom-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 28%;
+    margin: 20px; /* Center the card horizontally */
+    gap: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi halus */
+}
 
+.doc-counts .custom-card:hover{
+    background-color: #488b8f;
+    color: white;
+}
+
+.custom-card:hover .card-title,
+.custom-card:hover .card-text {
+    color: #ffffff ;/* Warna teks di dalam card saat hover */
+}
+.doc-counts .custom-card:hover img {
+    filter: invert(100%); /* Invert warna gambar saat hover */
+}
+.doc-counts .custom-card img {
+    width: 4vw; /* Adjust the width of the icon */
+    margin-left: auto; /* Push the icon to the right */
+    transition: filter 0.3s ease;
+}
+
+.doc-counts .card-content {
+    gap: 1rem; /* Allow the content to take up available space */
+    width: 70%;
+}
+
+.doc-counts .card-title {
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.doc-counts .card-text {
+    margin: 0;
+    color: #000000;
+    text-align: start;
+}
+
+/* New Rules */
+.new-rules {
+    padding: 20px;
+    background-color: #488B8F;
+    overflow-x: hidden;
+}
+
+.new-rules h5,p{
+    color: #000000;
+}
+
+.p-new-rules{
+    color: #000000;
+}
+
+.new-rules h3{
+    color: white;
+    padding: 10px;
+    margin-bottom: 2rem ;
+}
+
+.new-rules .container {
+    width: 60%;
+}
+
+.new-rules .custom-card {
+    display: flex;
+    align-items: flex-start; /* Align items to the top of the card */
+    justify-content: space-between; /* Spread out content horizontally */
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 1s ease, box-shadow 0.7s ease;
+}
+
+.new-rules .custom-card:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0px 10px 15px 7px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 10px 15px 7px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 10px 15px 7px rgba(0,0,0,0.25);
+}
+
+.new-rules .card-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Align children to space out horizontally */
+}
+
+.information {
+    max-width: 60%; /* Adjust width as necessary */
+    margin-left: 1rem;
+}
+
+.information h5 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.information p {
+    margin: 0;
+    font-size: 0.875rem;
+    text-align: start; /* Adjust font size as necessary */
+}
+
+.new-rules-details {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Align items to the right end */
+    gap: 10px; /* Space between items */
+}
+
+.new-rules-details p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: gray; /* Adjust font size as necessary */
+}
+
+.seen-counter, .download-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+.new-rules-details img {
+    width: 1svw; /* Adjust icon size */
+    height: auto;
+    filter: contrast(30%);
+}
+
+.new-rules .custom-btn-more{
+    font-size: larger;
+    padding: 6px;
+    border: 1px solid #305659;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000000;
+    width: 30%;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.new-rules .custom-btn-more:hover{
+    background-color: #488B8F;
+    color: white;
+    border:1px solid white;
+}
