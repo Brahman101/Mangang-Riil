@@ -72,9 +72,6 @@
                 <label for="subjek">Subjek</label>
                 <input type="text" id="subjek" name="subjek">
 
-                <label for="tahun-terbit">Tahun Terbit</label>
-                <input type="text" id="tahun-terbit" name="tahun-terbit">
-
                 <label for="sumber">Sumber</label>
                 <input type="text" id="sumber" name="sumber">
 

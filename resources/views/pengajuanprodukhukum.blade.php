@@ -36,6 +36,10 @@
         </aside>
         <main class="main-content">
             <h2>Pengajuan Produk Hukum</h2>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
             <table class="product-table">
                 <thead>
                     <tr>

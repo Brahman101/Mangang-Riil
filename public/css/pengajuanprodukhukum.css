@@ -90,6 +90,26 @@ body {
     color: #488B8F;
 }
 
+.search-container {
+    float: right;
+    padding: 20px;
+}
+
+.search-box {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #488B8F;
+    border-radius: 4px;
+}
+
+.search-button {
+    padding: 8px 16px;
+    border: 1px solid #488B8F;
+    border-radius: 4px;
+    background-color: #488B8F;
+    color: #FFFFFF;
+}
+
 /* Table Styles */
 .product-table {
     width: 100%;
@@ -101,7 +121,7 @@ body {
 
 .product-table th{
     border: none;
-    padding: 8px;
+    padding: 14px;
     text-align: center;
     background-color: #fff;
     

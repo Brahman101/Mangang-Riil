@@ -77,6 +77,27 @@ body {
 }
 
 /* Main Content Styles */
+
+.search-container {
+    float: right;
+    padding: 20px;
+}
+
+.search-box {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #488B8F;
+    border-radius: 4px;
+}
+
+.search-button {
+    padding: 8px 16px;
+    border: 1px solid #488B8F;
+    border-radius: 4px;
+    background-color: #488B8F;
+    color: #FFFFFF;
+}
+
 .main-content {
     flex: 1;
     padding: 40px;
