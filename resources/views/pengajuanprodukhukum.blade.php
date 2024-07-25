@@ -86,6 +86,7 @@
             </table>
         </main>
     </div>
+    <script src="{{ asset('js/pengajuanprodukhukum.js') }}" defer></script>
 </body>
 <script>
     feather.replace();

@@ -1,4 +1,3 @@
-<!-- resources/views/dashboardtambah.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,6 +87,7 @@
             </table>
         </main>
     </div>
+    <script src="{{ asset('js/katalogprodukhukum.js') }}" defer></script>
 </body>
 
 </html>

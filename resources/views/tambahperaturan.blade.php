@@ -39,14 +39,15 @@
                 <a href="{{ route('tambahperaturan') }}" class="tab-button active">Peraturan</a>
                 <a href="{{ route('tambahmonografi') }}" class="tab-button">Monografi</a>
                 <a href="{{ route('tambahartikel') }}" class="tab-button">Artikel</a>
-                <a href="{{ route('tambahputusan') }}" class="tab-button">Putusan</a>
+                <a href="{{ route('tambahputusan') }}" class="tab-button ">Putusan</a>
             </div>
             <form class="form">
-                <label for="tipe-dokumen">Tipe Dokumen</label>
-                <input type="text" id="tipe-dokumen" name="tipe-dokumen">
-
                 <label for="jenis-dokumen">Jenis Dokumen</label>
-                <input type="text" id="jenis-dokumen" name="jenis-dokumen">
+                <select class="text" style="margin-top: 5px;" name="jenis-dokumen">
+                    <option value="keputusan-wali-kota">Keputusan Wali Kota</option>
+                    <option value="peraturan-daerah">Peraturan Daerah</option>
+                    <option value="peraturan-walikota">Peraturan Walikota</option>
+                </select>
 
                 <label for="judul">Judul</label>
                 <input type="text" id="judul" name="judul">
@@ -76,7 +77,10 @@
                 <input type="text" id="sumber" name="sumber">
 
                 <label for="status">Status</label>
-                <input type="text" id="status" name="status">
+                <select class="text" name="status">
+                    <option value="diterima">Diterima</option>
+                    <option value="ditolak">Ditolak</option>
+                </select>
 
                 <label for="bahasa">Bahasa</label>
                 <input type="text" id="bahasa" name="bahasa">
@@ -88,10 +92,10 @@
                 <input type="text" id="bidang-hukum" name="bidang-hukum">
 
                 <label for="lampiran">Lampiran</label>
-                <input type="text" id="lampiran" name="lampiran">
+                <input type="file" id="lampiran" name="lampiran">
 
                 <label for="penandatanganan">Penandatanganan</label>
-                <input type="text" id="penandatanganan" name="penandatanganan">
+                <input type="file" id="penandatanganan" name="penandatanganan">
 
                 <label for="urusan-pemerintahan">Urusan Pemerintahan</label>
                 <input type="text" id="urusan-pemerintahan" name="urusan-pemerintahan">
@@ -103,6 +107,7 @@
             </form>
         </main>
     </div>
+    <script src="{{ asset('js/tambahperaturan.js') }}" defer></script>
 </body>
 
 </html>

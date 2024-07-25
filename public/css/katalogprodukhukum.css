@@ -88,6 +88,9 @@ body {
     padding: 8px;
     border: 1px solid #488B8F;
     border-radius: 4px;
+    color: #488B8F;
+    font-size: 14px;
+    outline: none;
 }
 
 .search-button {
@@ -96,6 +99,10 @@ body {
     border-radius: 4px;
     background-color: #488B8F;
     color: #FFFFFF;
+}
+
+.search-button:hover {
+    background-color: #3a6f6f;
 }
 
 .main-content {
