@@ -101,7 +101,7 @@ body {
 }
 
 .tab-button {
-    background-color: #F5F5F5;
+    background-color: #fff;
     border: 1px solid #488B8F;
     padding: 10px 20px;
     cursor: pointer;
@@ -123,6 +123,8 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 30px;
+    font-size: 16px; /* Ukuran font pada elemen form, termasuk label dan input */
+    color: #488B8F;
 }
 
 .form label {
@@ -137,8 +139,37 @@ body {
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
+    font-size: 16px; /* Menentukan ukuran font pada elemen input */
+    color: #488B8F;
 }
 
+.form input:focus {
+    border-color: #488B8F;
+    outline: none;
+}
+
+select.text { /* Menggunakan kelas */
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #488B8F;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    color: #488B8F;
+}
+
+select.text option {
+    padding: 8px;
+    font-size: 16px;
+    color: #488B8F;
+}
+
+select.text option:hover {
+    background-color: #488B8F;
+    color: #FFFFFF;
+}
+
+  
 .submit-button {
     background-color: #488B8F;
     color: #FFFFFF;

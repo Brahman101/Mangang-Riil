@@ -40,11 +40,12 @@
                 <a href="{{ route('tambahputusan') }}" class="tab-button">Putusan</a>
             </div>
             <form class="form">
-                <label for="tipe-dokumen">Tipe Dokumen</label>
-                <input type="text" id="tipe-dokumen" name="tipe-dokumen">
-
                 <label for="jenis-dokumen">Jenis Dokumen</label>
-                <input type="text" id="jenis-dokumen" name="jenis-dokumen">
+                <select class="text" style="margin-top: 5px;" name="jenis-dokumen">
+                    <option value="keputusan-wali-kota">Keputusan Wali Kota</option>
+                    <option value="peraturan-daerah">Peraturan Daerah</option>
+                    <option value="peraturan-walikota">Peraturan Walikota</option>
+                </select>
 
                 <label for="judul">Judul</label>
                 <input type="text" id="judul" name="judul">
@@ -76,8 +77,8 @@
                 <label for="subjek">Subjek</label>
                 <input type="text" id="subjek" name="subjek">
 
-                <label for="ISBN/ISSN">ISBN/ISSN</label>
-                <input type="text" id="ISBN/ISSN" name="ISBN/ISSN">
+                <label for="isbn-issn">ISBN/ISSN</label>
+                <input type="text" id="isbn-issn" name="isbn_issn">
 
                 <label for="bahasa">Bahasa</label>
                 <input type="text" id="bahasa" name="bahasa">
@@ -89,10 +90,10 @@
                 <input type="text" id="bidang-hukum" name="bidang-hukum">
 
                 <label for="lampiran">Lampiran</label>
-                <input type="text" id="lampiran" name="lampiran">
+                <input type="file" id="lampiran" name="lampiran">
 
                 <label for="penandatanganan">Penandatanganan</label>
-                <input type="text" id="penandatanganan" name="penandatanganan">
+                <input type="file" id="penandatanganan" name="penandatanganan">
 
                 <label for="nomor-induk-buku">Nomor Induk Buku</label>
                 <input type="text" id="nomor-induk-buku" name="nomor-induk-buku">
