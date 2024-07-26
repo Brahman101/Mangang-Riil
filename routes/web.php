@@ -39,4 +39,8 @@
 
     Route::get('/', function () {
         return view('beranda');
-    });
+    })->name('beranda');
+
+    Route::get('/produkPerundangan', function () {
+        return view('produkPerundangan');
+    })->name('produkPerundangan');
