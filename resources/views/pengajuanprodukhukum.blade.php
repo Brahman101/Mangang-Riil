@@ -25,7 +25,7 @@
                 <li><a href="{{ route('pengajuanprodukhukum') }}">Pengajuan Produk Hukum</a></li>
                 <li><a href="{{ route('katalogprodukhukum') }}">Katalog Produk Hukum</a></li>
                 <li><a href="{{ route('tambahperaturan') }}">Tambah Produk Hukum</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="{{ route('profile') }}">Profile</a></li>
             </ul>
             <div class="user-info">
                 <h3>User Information</h3>

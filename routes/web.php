@@ -1,6 +1,7 @@
     <?php
 
     use Illuminate\Support\Facades\Route;
+    use App\Http\Controllers\ProfileController;
 
     /*
     |--------------------------------------------------------------------------
@@ -36,6 +37,24 @@
     Route::get('/pengajuanprodukhukum', function () {
         return view('pengajuanprodukhukum');
     })->name('pengajuanprodukhukum');
+
+    Route::get('/profile', function () {
+        return view('profile');
+    })->name('profile');
+
+    Route::post('/profile', [ProfileController::class, 'updateProfile']);
+
+    Route::get('/login1', function () {
+        return view('login');
+    })->name('login');
+
+    Route::get('/register1', function () {
+        return view('register');
+    })->name('register');
+
+    Route::post('login', [ProfileController::class, 'login']);
+    Route::post('register', [ProfileController::class, 'register']);
+    Route::post('logout', [ProfileController::class, 'logout'])->name('logout');
 
     Route::get('/', function () {
         return view('beranda');

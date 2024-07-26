@@ -22,7 +22,7 @@
                 <li><a href="{{ route('pengajuanprodukhukum') }}">Pengajuan Produk Hukum</a></li>
                 <li><a href="{{ route('katalogprodukhukum') }}">Katalog Produk Hukum</a></li>
                 <li><a href="{{ route('tambahperaturan') }}">Tambah Produk Hukum</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="{{ route('profile') }}">Profile</a></li>
             </ul>
             <div class="user-info">
                 <h3>User Information</h3>
@@ -48,46 +48,46 @@
                 </select>
 
                 <label for="judul">Judul</label>
-                <input type="text" id="judul" name="judul">
+                <input type="text" id="judul" name="judul" required>
 
                 <label for="pengarang">Pengarang</label>
-                <input type="text" id="pengarang" name="pengarang">
+                <input type="text" id="pengarang" name="pengarang" required>
 
                 <label for="tahun-terbit">Tahun Terbit</label>
-                <input type="text" id="tahun-terbit" name="tahun-terbit">
+                <input type="text" id="tahun-terbit" name="tahun-terbit" required>
 
                 <label for="tempat-penetapan">Tempat Penetapan</label>
-                <input type="text" id="tempat-penetapan" name="tempat-penetapan">
+                <input type="text" id="tempat-penetapan" name="tempat-penetapan" required>
 
                 <label for="penerbit">Penerbit</label>
-                <input type="text" id="penerbit" name="penerbit">
+                <input type="text" id="penerbit" name="penerbit" required>
 
                 <label for="tanggal-penetapan">Tanggal Penetapan</label>
-                <input type="text" id="tanggal-penetapan" name="tanggal-penetapan">
+                <input type="text" id="tanggal-penetapan" name="tanggal-penetapan" required>
 
                 <label for="nomor-panggil">Nomor Panggil</label>
-                <input type="text" id="nomor-panggil" name="nomor-panggil">
+                <input type="text" id="nomor-panggil" name="nomor-panggil" required>
 
                 <label for="cetakan">Cetakan</label>
-                <input type="text" id="cetakan" name="cetakan">
+                <input type="text" id="cetakan" name="cetakan" required>
 
                 <label for="deskripsi-fisik">Deskripsi Fisik</label>
-                <input type="text" id="deskripsi-fisik" name="deskripsi-fisik">
+                <input type="text" id="deskripsi-fisik" name="deskripsi-fisik" required>
 
                 <label for="subjek">Subjek</label>
-                <input type="text" id="subjek" name="subjek">
+                <input type="text" id="subjek" name="subjek" required>
 
                 <label for="isbn-issn">ISBN/ISSN</label>
-                <input type="text" id="isbn-issn" name="isbn_issn">
+                <input type="text" id="isbn-issn" name="isbn_issn" required>
 
                 <label for="bahasa">Bahasa</label>
-                <input type="text" id="bahasa" name="bahasa">
+                <input type="text" id="bahasa" name="bahasa" required>
 
                 <label for="lokasi">Lokasi</label>
-                <input type="text" id="lokasi" name="lokasi">
+                <input type="text" id="lokasi" name="lokasi" required>
 
                 <label for="bidang-hukum">Bidang Hukum</label>
-                <input type="text" id="bidang-hukum" name="bidang-hukum">
+                <input type="text" id="bidang-hukum" name="bidang-hukum" required>
 
                 <label for="lampiran">Lampiran</label>
                 <input type="file" id="lampiran" name="lampiran">
@@ -96,7 +96,7 @@
                 <input type="file" id="penandatanganan" name="penandatanganan">
 
                 <label for="nomor-induk-buku">Nomor Induk Buku</label>
-                <input type="text" id="nomor-induk-buku" name="nomor-induk-buku">
+                <input type="text" id="nomor-induk-buku" name="nomor-induk-buku" required>
 
                 <button type="submit" class="submit-button">Tambahkan</button>
             </form>
