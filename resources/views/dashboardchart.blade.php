@@ -33,32 +33,9 @@
             </div>
         </aside>
         <main class="main-content">
-            <h2>Profile</h2>
-            <form class="form" id="emailform" method="POST" action="{{ route('profile') }}">
-                @csrf
-                @method('PUT')
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
+            <h2>Chart</h2>
+            <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 712px;" width="1424" height="500" class="chartjs-render-monitor"></canvas>
 
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required>
-
-                <label for="password_confirmation">Confirm Password:</label>
-                <input type="password" name="password_confirmation" id="password_confirmation" required>
-
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="nip">NIP</label>
-                <input type="text" id="nip" name="nip" required>
-
-                <label for="pilih-dinas">Pilih Dinas</label>
-                <select class="text" name="pilih-dinas">
-                    <option value="SETDA-bagian-hukum-kota-batu">SETDA Bagian Hukum Kota Batu</option>
-                    <option value="SETDA-bagian-hukum-kota-malang">SETDA Bagian Hukum Kota Malang</option>
-                </select>
-                <button type="submit" class="submit-button">Edit Profile</button>
-            </form>
         </main>
     </div>
     <script src="{{ asset('js/profile.js') }}" defer></script>

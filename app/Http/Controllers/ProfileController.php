@@ -55,7 +55,7 @@ class ProfileController extends Controller
 
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user);
-            return redirect()->intended('home'); // Redirect to your desired route
+            return redirect()->intended('profile');
         }
 
         return redirect()->back()->withErrors(['email' => 'Invalid credentials']);
