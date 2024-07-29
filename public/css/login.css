@@ -1,0 +1,85 @@
+/* app.css */
+
+body {
+    margin: 20;
+    font-family: 'Montserrat';
+    align-items: center;
+    justify-content: center;
+    background-color: #48888f;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #488B8F;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #488B8F;
+}
+
+.form-group input {
+    width: 480px;
+    padding: 8px;
+    border: 1px solid #488B8F;
+    border-radius: 4px;
+}
+
+.form-group input:focus {
+    border-color: #488B8F;
+    outline: none;
+}
+
+button {
+    width: 498px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #488B8F;
+    color: #fff;
+    border: 1px solid #488B8F;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #488B8F;
+    border: 1px solid #488B8F;
+}
+
+.error {
+    margin-top: 10px;
+    color: red;
+}
+
+.error p {
+    margin: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

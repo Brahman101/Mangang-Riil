@@ -1,6 +1,7 @@
     <?php
 
     use Illuminate\Support\Facades\Route;
+    use App\Http\Controllers\ProfileController;
 
     /*
     |--------------------------------------------------------------------------
@@ -37,6 +38,24 @@
         return view('pengajuanprodukhukum');
     })->name('pengajuanprodukhukum');
 
+    Route::get('/profile', function () {
+        return view('profile');
+    })->name('profile');
+
+    Route::post('/profile', [ProfileController::class, 'updateProfile']);
+
+    Route::get('/login1', function () {
+        return view('login');
+    })->name('login');
+
+    Route::get('/register1', function () {
+        return view('register');
+    })->name('register');
+
+    Route::post('login', [ProfileController::class, 'login']);
+    Route::post('register', [ProfileController::class, 'register']);
+    Route::post('logout', [ProfileController::class, 'logout'])->name('logout');
+
     Route::get('/', function () {
         return view('beranda');
     })->name('beranda');
@@ -44,20 +63,3 @@
     Route::get('/produkPerundangan', function () {
         return view('produkPerundangan');
     })->name('produkPerundangan');
-
-    Route::get('/produkMonografi', function () {
-        return view('produkMonografi');
-    })->name('produkMonografi');
-
-    Route::get('/produkArtikel', function () {
-        return view('produkArtikel');
-    })->name('produkArtikel');
-
-    Route::get('/produkPutusan', function () {
-        return view('produkPutusan');
-    })->name('produkPutusan');
-
-
-    Route::get('/detail-produkPerundangan', function () {
-        return view('detail-produkPerundangan');
-    })->name('detail-produkPerundangan');
