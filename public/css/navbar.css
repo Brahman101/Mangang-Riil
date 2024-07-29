@@ -113,7 +113,7 @@
 .dropdown-menu {
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    min-width: 12rem; /* Adjust the minimum width as needed */
+    min-width: 10rem; /* Adjust the minimum width as needed */
     padding: 0;
     background-color: #ffffff;
 }

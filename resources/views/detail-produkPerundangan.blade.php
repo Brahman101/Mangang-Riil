@@ -8,6 +8,7 @@
     <title>Peraturan Perundang-Undangan - JDIH Kota Batu</title>
     <link rel="stylesheet" href="{{asset('css/navbar.css')}}">
     <link rel="stylesheet" href="{{asset('css/produkHukum.css')}}">
+    <link rel="stylesheet" href="{{asset('css/detail-produkHukum.css')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -120,16 +121,15 @@
         </ul>
     </nav>
 
-    <!-- !!Main Section!! -->
+    <!-- Main Part -->
     <section class="main-section d-flex flex-column align-items-center justify-content-center">
-        <h2>Peraturan Perundang-Undangan</h2>
         <div class="container d-flex flex-row align-items-start">
             <!-- Left Part -->
-            <div class="left-part d-flex flex-column align-items-center justify-content-center">
-                <a href="{{route('detail-produkPerundangan')}}" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
+            <div class="left-part d-flex flex-column align-items-start justify-content-center">
+                <div class="outer-container d-flex flex-column align-items-center justify-content-center">
+                    <div class="details-container  d-flex flex-column align-items-center justify-content-start">
+                        <h3>[one_of_produk_hukum_selected_title]</h3>
+                        <div class="rule-details d-flex flex-row justify-content-between align-items-start">
                             <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
                                 <p>[tanggal_diterbitkan]</p>
                                 <p>[tipe_produk_hukum?]</p>
@@ -139,89 +139,81 @@
                                 <p><i class="fa-solid fa-download"></i>[download]</p>
                             </div>
                         </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
-                <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
+                        <div class="details-status d-flex flex-column justify-content-between align-items-start">
+                            <dl>
+                                <div class="d-flex">
+                                    <dt>Jenis Dokumen</dt>
+                                    <dd>{{ '$document->jenis_dokumen' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Nomor</dt>
+                                    <dd>{{ '$document->nomor' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Judul</dt>
+                                    <dd>{{ '$document->judul' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>T.E.U.</dt>
+                                    <dd>{{'$document->teu' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Singkatan Jenis</dt>
+                                    <dd>{{ '$document->singkatan_jenis' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Tahun</dt>
+                                    <dd>{{ '$document->tahun' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Tempat Penetapan</dt>
+                                    <dd>{{ '$document->tempat_penetapan' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Tanggal Penetapan</dt>
+                                    <dd>{{ '$document->tanggal_penetapan' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Subjek</dt>
+                                    <dd>{{ '$document->subjek' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Status</dt>
+                                    <dd>{{ '$document->status' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Sumber</dt>
+                                    <dd>{{ '$document->sumber' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Bidang Hukum</dt>
+                                    <dd>{{ '$document->bidang_hukum '}}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Urusan Pemerintahan</dt>
+                                    <dd>{{ '$document->urusan_pemerintahan' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Bahasa</dt>
+                                    <dd>{{ '$document->bahasa' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>SKPD Pemrakarsa</dt>
+                                    <dd>{{ '$document->skpd_pemrakarsa '}}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Penandatanganan</dt>
+                                    <dd>{{ '$document->penandatanganan' }}</dd>
+                                </div>
+                                <div class="d-flex">
+                                    <dt>Lokasi</dt>
+                                    <dd>{{ '$document->lokasi' }}</dd>
+                                </div>
+                            </dl>
                         </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
+
                     </div>
-                </a>
-                <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
-                        </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
-                <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
-                        </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
-                <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
-                        </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
-                <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
-                        </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
+                </div>
                 <!-- Pagination Here -->
             </div>
             <!-- End Left Part -->

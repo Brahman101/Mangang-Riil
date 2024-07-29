@@ -1,0 +1,39 @@
+.details-container {
+    width: 100%;
+    padding: 6px;
+}
+
+.details-status dl {
+    width: 100%;
+}
+
+.details-status dl .d-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.details-status dt,
+.details-status dd {
+    margin: 0;
+    padding: 5px;
+}
+
+.details-status dd::before {
+    content: ":";
+    margin-right: 1rem; /* Adjust the space between : and dd content */
+}
+
+.details-status dt {
+    align-items: start;
+    width: 100%;
+    font-weight: bold;
+    flex: 2;
+    display: flex;
+    justify-content: start;
+}
+
+.details-status dd {
+    flex: 4;
+    padding-left: 5px; /* Adjust the space between : and dd */
+}

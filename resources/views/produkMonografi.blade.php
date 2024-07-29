@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{asset('images/LogoKotaBatu.png')}}">
-    <title>Peraturan Perundang-Undangan - JDIH Kota Batu</title>
+    <title>Monografi Hukum - JDIH Kota Batu</title>
     <link rel="stylesheet" href="{{asset('css/navbar.css')}}">
     <link rel="stylesheet" href="{{asset('css/produkHukum.css')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
@@ -122,93 +122,13 @@
 
     <!-- !!Main Section!! -->
     <section class="main-section d-flex flex-column align-items-center justify-content-center">
-        <h2>Peraturan Perundang-Undangan</h2>
+        <h2>Monografi Hukum</h2>
         <div class="container d-flex flex-row align-items-start">
             <!-- Left Part -->
             <div class="left-part d-flex flex-column align-items-center justify-content-center">
-                <a href="{{route('detail-produkPerundangan')}}" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
-                        </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
                 <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
                     <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
-                        </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
-                <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
-                        </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
-                <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
-                        </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
-                <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
-                        <div class="rule-details d-flex flex-row justify-content-between align-items-center">
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
-                                <p>[tanggal_diterbitkan]</p>
-                                <p>[tipe_produk_hukum?]</p>
-                            </div>
-                            <div class="rule-details-component d-flex flex-row align-items-center justify-content-end">
-                                <p><i class="fa-regular fa-eye"></i>[seen]</p>
-                                <p><i class="fa-solid fa-download"></i>[download]</p>
-                            </div>
-                        </div>
-                        <h5>Lorem ipsum odor amet, consectetuer adipiscing elit. Ad mollis varius sem curabitur torquent nisl molestie. Vulputate facilisi id risus tempus nam litora habitasse erat. Congue nullam magnis quisque convallis primis habitasse natoque. Augue nulla metus phasellus at potenti lorem interdum nam.</h5>
-                    </div>
-                </a>
-                <a href="" class="custom-card d-flex flex-column align-items-center justify-content-start">
-                    <div class="card-content d-flex flex-column align-items-center justify-content-start">
-                        <h3>[peraturan_perundangan_title]</h3>
+                        <h3>[monografi_hukum_title]</h3>
                         <div class="rule-details d-flex flex-row justify-content-between align-items-center">
                             <div class="rule-details-component d-flex flex-row align-items-center justify-content-start">
                                 <p>[tanggal_diterbitkan]</p>

@@ -44,3 +44,20 @@
     Route::get('/produkPerundangan', function () {
         return view('produkPerundangan');
     })->name('produkPerundangan');
+
+    Route::get('/produkMonografi', function () {
+        return view('produkMonografi');
+    })->name('produkMonografi');
+
+    Route::get('/produkArtikel', function () {
+        return view('produkArtikel');
+    })->name('produkArtikel');
+
+    Route::get('/produkPutusan', function () {
+        return view('produkPutusan');
+    })->name('produkPutusan');
+
+
+    Route::get('/detail-produkPerundangan', function () {
+        return view('detail-produkPerundangan');
+    })->name('detail-produkPerundangan');
