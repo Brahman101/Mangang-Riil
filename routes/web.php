@@ -52,7 +52,8 @@
         return view('register');
     })->name('register');
 
-    Route::post('login', [ProfileController::class, 'login']);
+    Route::get('login', [ProfileController::class, 'index']);
+    Route::post('login-proses', [ProfileController::class, 'login_proses'])->name('login-proses');
     Route::post('register', [ProfileController::class, 'register']);
     Route::post('logout', [ProfileController::class, 'logout'])->name('logout');
 

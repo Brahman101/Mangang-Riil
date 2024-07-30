@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\Password;
 
 class ProfileController extends Controller
 {
@@ -44,6 +45,31 @@ class ProfileController extends Controller
         return redirect()->route('login');
     }
 
+    //LOGIN
+    public function index()
+    {
+        return view('auth.login');
+    }
+
+    public function login_proses(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $data = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        if (Auth::attempt($data)) {
+            return redirect()->route('profile');
+        } else {
+            return redirect()->back()->withErrors(['email' => 'Email/Password Salah']);
+        }
+    }
+
     public function login(Request $request)
     {
         $request->validate([
@@ -58,7 +84,20 @@ class ProfileController extends Controller
             return redirect()->intended('profile');
         }
 
-        return redirect()->back()->withErrors(['email' => 'Invalid credentials']);
+        return redirect()->back()->withErrors(['email' => 'Email/Password Salah']);
+    }
+
+    public function sendResetLink(Request $request)
+    {
+        $request->validate(['email' => 'required|email']);
+
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $status == Password::RESET_LINK_SENT
+            ? back()->with('status', __($status))
+            : back()->withErrors(['email' => __($status)]);
     }
 
     public function logout()
