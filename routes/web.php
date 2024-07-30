@@ -63,3 +63,7 @@
     Route::get('/produkPerundangan', function () {
         return view('produkPerundangan');
     })->name('produkPerundangan');
+
+    Route::get('/dashboardchart', function () {
+        return view('dashboardchart');
+    })->name('dashboardchart');
