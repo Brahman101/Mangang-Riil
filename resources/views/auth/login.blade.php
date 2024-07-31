@@ -15,11 +15,11 @@
             @csrf
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" placeholder="name@example.com" required">
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
             </div>
             <button type="submit">Login</button>
             @if($errors->any())
@@ -30,8 +30,9 @@
             </div>
             @endif
         </form>
-        <p>Don't have an account? <a href="{{ route('register') }}">Register here</a></p>
+        <p>Dont have an account? <a href="{{ route('register') }}">Register here</a></p>
     </div>
 </body>
+
 
 </html>

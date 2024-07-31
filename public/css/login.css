@@ -61,9 +61,8 @@ button {
 }
 
 button:hover {
-    background-color: #fff;
-    color: #488B8F;
-    border: 1px solid #488B8F;
+    background-color: #3a6f6f;
+    border: 1px solid #3a6f6f;
 }
 
 .error {
@@ -78,8 +77,4 @@ button:hover {
 a {
     color: #007bff;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }

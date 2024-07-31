@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengisian Metadata</title>
-    <link rel="stylesheet" href="{{ asset('css/dashboardtambah.css') }}">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    @yield('title')
+    @yield('css')
+    <link rel="stylesheet" href="{{ asset('css/dropdown.css') }}">
 </head>
 
 <body>
@@ -15,6 +18,16 @@
                 SIMPROKUM
             </a>
         </div>
+        <div class="dropdown">
+            <ul>
+                <li><a href="#">Akun &dtrif;</a>
+                    <ul class="dropdown">
+                        <li><a href="{{ route('profile') }}">Profile</a></li>
+                        <li><a href="{{ route('logout') }}">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </nav>
     <div class="container">
         <aside class="sidebar">
@@ -22,8 +35,6 @@
                 <li><a href="{{ route('pengajuanprodukhukum') }}">Pengajuan Produk Hukum</a></li>
                 <li><a href="{{ route('katalogprodukhukum') }}">Katalog Produk Hukum</a></li>
                 <li><a href="{{ route('tambahperaturan') }}">Tambah Produk Hukum</a></li>
-                <li><a href="{{ route('dashboardchart') }}">Chart</a></li>
-                <li><a href="{{ route('profile') }}">Profile</a></li>
             </ul>
             <div class="user-info">
                 <h3>User Information</h3>
@@ -32,13 +43,8 @@
                 <p><strong>Dinas:</strong> SETDA Bagian Hukum Kota Batu</p>
             </div>
         </aside>
-        <main class="main-content">
-            <h2>Chart</h2>
-            <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 712px;" width="1424" height="500" class="chartjs-render-monitor"></canvas>
-
-        </main>
+        @yield('content')
     </div>
-    <script src="{{ asset('js/profile.js') }}" defer></script>
 </body>
 
 </html>

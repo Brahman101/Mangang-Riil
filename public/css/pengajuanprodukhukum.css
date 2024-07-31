@@ -164,5 +164,5 @@ body {
 }
 
 .action-button:hover {
-    filter: brightness(0.8);
+    background-color: #3a6f6f;
 }

@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use Illuminate\Support\Facades\Password;
 
 class ProfileController extends Controller
 {
@@ -46,63 +45,34 @@ class ProfileController extends Controller
     }
 
     //LOGIN
-    public function index()
+    public function index_login()
     {
         return view('auth.login');
+    }
+    public function index_regis()
+    {
+        return view('auth.register');
     }
 
     public function login_proses(Request $request)
     {
-        $request->validate([
+        $credentials = $request->validate([
             'email' => 'required|email',
-            'password' => 'required',
+            'password' => 'required|min:8',
         ]);
 
-        $data = [
-            'email' => $request->email,
-            'password' => $request->password,
-        ];
-
-        if (Auth::attempt($data)) {
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
             return redirect()->route('profile');
         } else {
             return redirect()->back()->withErrors(['email' => 'Email/Password Salah']);
         }
     }
 
-    public function login(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
-
-        $user = User::where('email', $request->email)->first();
-
-        if ($user && Hash::check($request->password, $user->password)) {
-            Auth::login($user);
-            return redirect()->intended('profile');
-        }
-
-        return redirect()->back()->withErrors(['email' => 'Email/Password Salah']);
-    }
-
-    public function sendResetLink(Request $request)
-    {
-        $request->validate(['email' => 'required|email']);
-
-        $status = Password::sendResetLink(
-            $request->only('email')
-        );
-
-        return $status == Password::RESET_LINK_SENT
-            ? back()->with('status', __($status))
-            : back()->withErrors(['email' => __($status)]);
-    }
-
+    //LOGOUT
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('login');
+        return redirect()->route('login')->with('success', 'Logout Berhasil');
     }
 }
