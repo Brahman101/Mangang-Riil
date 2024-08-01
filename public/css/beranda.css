@@ -64,9 +64,13 @@ body {
     text-align: center;
 }
 
-.bagian-dua > div {
+.bagian-dua {
     width: 100%;
-    padding: 0 15px;
+    gap: 15px;
+}
+
+.bagian-dua-item {
+    width: 100%;
 }
 
 .bagian-tiga {
@@ -201,6 +205,11 @@ p {
     .bagian-tiga {
         width: 100%;
     }
+
+    .bagian-dua-item {
+        width: 48%; /* Adjust as needed */
+    }
+
     .custom-btn,
     .form-control {
         width: 100%;
@@ -215,25 +224,45 @@ p {
 /* Document Counts */
 .doc-counts {
     overflow-x: hidden;
+    padding: 20px 0;
 }
+
+.doc-counts .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .doc-counts a {
     text-decoration: none; /* Menghapus garis bawah pada tautan */
     color: inherit; /* Mengatur warna teks mengikuti warna elemen induk */
 }
 .doc-counts .custom-card {
-    padding: 20px;
-    border: 1px solid #ddd;
+    flex-basis: 100%;
+
+    padding: 15px;
+    background-color: #f8f9fa;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 28%;
-    margin: 20px; /* Center the card horizontally */
-    gap: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi halus */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .doc-counts .custom-card:hover {
+    transform: translateY(-5px);
     background-color: #488b8f;
     color: white;
+}
+
+@media (min-width: 576px) {
+    .custom-card {
+        flex-basis: calc(30% - 10px);
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-card {
+        flex-basis: calc(15% - 15px);
+    }
 }
 
 .custom-card:hover .card-title,
@@ -244,7 +273,7 @@ p {
     filter: invert(100%); /* Invert warna gambar saat hover */
 }
 .doc-counts .custom-card img {
-    width: 4vw; /* Adjust the width of the icon */
+    width: 20%; /* Adjust the width of the icon */
     margin-left: auto; /* Push the icon to the right */
     transition: filter 0.3s ease;
 }
