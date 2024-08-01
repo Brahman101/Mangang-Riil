@@ -15,7 +15,7 @@
                 <input type="text" class="form-control justify-content-center" id="cariKeyword" placeholder="Judul Produk Hukum...">
             </div>
             <div class="d-flex flex-md-row justify-content-between bagian-dua">
-                <div class="text-center">
+                <div class="bagian-dua-item mb-3 mb-md-0 text-center">
                     <h5 class="exc-search-column">Tipe Dokumen</h5>
                     <div class="dropdown-tipe">
                         <button id="dropdownTipe" class="dropdown-toggle custom-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,7 +30,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="bagian-dua-item text-center">
                     <h5 class="exc-search-column">Jenis Dokumen</h5>
                     <div class="dropdown-jenis">
                         <button id="dropdownJenis" class="dropdown-toggle custom-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,35 +76,45 @@
 
     <!-- Count of Documents -->
     <section class="doc-counts d-flex align-items-center justify-content-center">
-        <div class="container d-flex align-items-center">
-            <a href="#" class="custom-card peraturan d-flex justify-content-between">
-                <div class="card-content">
-                    <div class="card-title">[counts]</div>
-                    <p class="card-text">Peraturan</p>
+        <div class="container d-flex align-items-center justify-content-center">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center">
+                <div class="col">
+                    <a href="#" class="custom-card peraturan d-flex justify-content-between">
+                        <div class="card-content">
+                            <div class="card-title">[counts]</div>
+                            <p class="card-text">Peraturan</p>
+                        </div>
+                        <img src="{{ asset('images/ikon_timbangan.png') }}" alt="Peraturan">
+                    </a>
                 </div>
-                <img src="{{ asset('images/ikon_timbangan.png') }}" alt="Peraturan">
-            </a>
-            <a href="#" class="custom-card monografi-hukum d-flex justify-content-between">
-                <div class="card-content">
-                    <div class="card-title">[counts]</div>
-                    <p class="card-text">Monografi Hukum</p>
+                <div class="col">
+                    <a href="#" class="custom-card monografi-hukum d-flex justify-content-between">
+                        <div class="card-content">
+                            <div class="card-title">[counts]</div>
+                            <p class="card-text">Monografi Hukum</p>
+                        </div>
+                        <img src="{{ asset('images/ikon_buku.png') }}" alt="Monografi Hukum">
+                    </a>
                 </div>
-                <img src="{{ asset('images/ikon_buku.png') }}" alt="Monografi Hukum">
-            </a>
-            <a href="#" class="custom-card artikel-hukum d-flex justify-content-between">
-                <div class="card-content">
-                    <div class="card-title">[counts]</div>
-                    <p class="card-text">Artikel Hukum</p>
+                <div class="col">
+                    <a href="#" class="custom-card artikel-hukum d-flex justify-content-between">
+                        <div class="card-content">
+                            <div class="card-title">[counts]</div>
+                            <p class="card-text">Artikel Hukum</p>
+                        </div>
+                        <img src="{{ asset('images/ikon_artikel.png') }}" alt="Artikel Hukum">
+                    </a>
                 </div>
-                <img src="{{ asset('images/ikon_artikel.png') }}" alt="Artikel Hukum">
-            </a>
-            <a href="#" class="custom-card putusan-pengadilan d-flex justify-content-between">
-                <div class="card-content">
-                    <div class="card-title">[counts]</div>
-                    <p class="card-text">Putusan Pengadilan</p>
+                <div class="col">
+                    <a href="#" class="custom-card putusan-pengadilan d-flex justify-content-between">
+                        <div class="card-content">
+                            <div class="card-title">[counts]</div>
+                            <p class="card-text">Putusan Pengadilan</p>
+                        </div>
+                        <img src="{{ asset('images/ikon_gavel.png') }}" alt="Putusan Pengadilan">
+                    </a>
                 </div>
-                <img src="{{ asset('images/ikon_gavel.png') }}" alt="Putusan Pengadilan">
-            </a>
+            </div>
         </div>
     </section>
 
