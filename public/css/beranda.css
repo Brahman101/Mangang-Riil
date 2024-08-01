@@ -1,8 +1,16 @@
 /* public/css/newberanda.css */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 body {
     background-color: #ffffff;
     width: 100%;
-    height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
@@ -33,12 +41,12 @@ body {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     width: 100%;
-    height: 60vh;
-    margin: auto;
-    background-image: url("../images/hero_amongtani.jpeg"); /* Path to your background image */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0;
+    margin-left: calc(-50vw + 50%);
+    background-image: url("/images/hero_amongtani.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 0px 10px 15px -4px rgba(0, 0, 0, 0.26);
     -webkit-box-shadow: 0px 10px 15px -4px rgba(0, 0, 0, 0.26);
     -moz-box-shadow: 0px 10px 15px -4px rgba(0, 0, 0, 0.26);
@@ -47,24 +55,53 @@ body {
 .bagian-satu,
 .bagian-dua,
 .bagian-tiga {
-    width: 80rem;
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 20px;
 }
 
 .bagian-satu input {
     text-align: center;
 }
 
+.bagian-dua > div {
+    width: 100%;
+    padding: 0 15px;
+}
+
 .bagian-tiga {
-    gap: 1rem;
-    margin-bottom: 2rem;
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.flex-item input,
+.flex-item .dropdown-status,
+.flex-item .custom-btn {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .bagian-tiga {
+        flex-direction: column;
+    }
 }
 
 .form-control {
     padding: 10px;
     height: 3rem;
-    width: 100%;
     margin: auto;
+}
+
+.form-control,
+.custom-btn {
+    width: 100%;
+    height: 3rem;
+    padding: 10px;
 }
 
 .custom-btn {
@@ -84,14 +121,16 @@ body {
 
 .custom-btn::after {
     content: "\25BC";
+    font-size: 0.4rem;
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
 }
 
 .dropdown-menu {
+    width: 100%;
     min-width: 100%;
 }
 
@@ -136,15 +175,41 @@ p {
     border: none;
     padding: 10px 20px;
     border-radius: 6px;
-    width: 60rem; /* Adjust this value as needed */
+    width: 60vw;
+    max-width: 400px;
+    margin: 20px auto 0;
     display: block;
-    margin: 0 auto; /* Center the button */
     font-size: large;
     font-weight: bold;
 }
 
 .search-column button[type="submit"]:hover {
     background: #e04b53;
+}
+
+@media (max-width: 768px) {
+    .search-column {
+        padding: 10px;
+    }
+
+    .bagian-tiga > div {
+        width: 100%;
+    }
+
+    .bagian-satu,
+    .bagian-dua,
+    .bagian-tiga {
+        width: 100%;
+    }
+    .custom-btn,
+    .form-control {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-column button[type="submit"] {
+        width: 90%;
+    }
 }
 
 /* Document Counts */
@@ -319,6 +384,7 @@ p {
     padding: 2rem 0;
     background-color: #ffffff;
     gap: 0.8rem;
+    border-bottom: 1px solid #cdd2db;
 }
 
 .news-activity .container {

@@ -26,13 +26,13 @@
         return view('beranda');
     })->name('beranda');
 
+    Route::get('/produkPerundangan', function () {
+        return view('produkPerundangan');
+    })->name('produkPerundangan');
+
 
 
     Route::group(['prefix' => 'admin', 'middleware' => ['admin'], 'as' => 'admin.'], function () {
-
-        Route::get('/produkPerundangan', function () {
-            return view('produkPerundangan');
-        })->name('produkPerundangan');
 
         Route::get('/dashboardchart', function () {
             return view('dashboardchart');
